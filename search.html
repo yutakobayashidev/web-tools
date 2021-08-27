@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Chromium-->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🔎</text></svg>">
+    <!-- Safari / IE -->
+    <link rel="icon alternate" type="image/png" href="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f528.png" />
+    <title>様々な検索エンジンで検索</title>
+</head>
+
+<body>
+    <div id="content">
+        <aside class="sidebar">
+            <div class="sidebar-inner">
+                <header class="sidebar-header">
+                    <a href="index.html">🔨 便利なウェブツール</a>
+                    <div>
+                        <a href="https://github.com/progedu/web-tools">
+                            <img src="img/github.svg" width="32" height="32">
+                        </a>
+                    </div>
+                </header>
+                <ul class="sidemenu">
+                    <li><a href="letter.html">✏️ 文字数カウンター</a></li>
+                    <li><a href="search.html">🔎 様々な検索エンジンで検索</a></li>
+                    <li><a href="clock.html">⏰ ストップウォッチ・残り時間</a></li>
+                    <li><a href="ytthumbnail.html">⏩ Youtubeのサムネイルを取得</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main class="main">
+            <div class="main-inner">
+                <h1 class="title c"><img src="img/google.png"></h1>
+                <p>検索エンジンやSNS、ECサイトなどで一括で検索できるツールです。一文字以上入力していないと検索できません。</p>
+                <form name="test" onsubmit="check_data();return false;">
+                    <input name="sendTxt" placeholder="検索したい内容を入力" cols="80" rows="10" maxlength="140"
+                        id="input1"></textarea>
+                    <h2>検索エンジン</h2>
+                    <input name="key" type="hidden" value="" />
+                    <button type="submit" id="eventButton1" class="s google" disabled
+                        onclick="test.key.value='google'"><svg viewBox="0 0 533.5 544.3" width="18" height="18">
+                            <path
+                                d="M533.5 278.4a320.07 320.07 0 00-4.7-55.3H272.1v104.8h147a126 126 0 01-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z"
+                                fill="#4285f4"></path>
+                            <path
+                                d="M272.1 544.3c73.4 0 135.3-24.1 180.4-65.7l-87.7-68c-24.4 16.6-55.9 26-92.6 26-71 0-131.2-47.9-152.8-112.3H28.9v70.1a272.19 272.19 0 00243.2 149.9z"
+                                fill="#34a853"></path>
+                            <path d="M119.3 324.3a163 163 0 010-104.2V150H28.9a272.38 272.38 0 000 244.4z"
+                                fill="#fbbc04">
+                            </path>
+                            <path
+                                d="M272.1 107.7a147.89 147.89 0 01104.4 40.8l77.7-77.7A261.56 261.56 0 00272.1 0 272.1 272.1 0 0028.9 150l90.4 70.1c21.5-64.5 81.8-112.4 152.8-112.4z"
+                                fill="#ea4335"></path>
+                        </svg> Search With Google</button>
+                    <button type="submit" id="eventButton2" class="s yahoojp"
+                        onclick="test.key.value='yahoo'" disabled><i class="fab fa-yahoo"></i> Search With Yahoo Japan!</button>
+                    <button type="submit" data-index="3" id="eventButton3" class="s bing"
+                        onclick="test.key.value='bing'" disabled>Search With Bing</button>
+                    <h2>SNS</h2>
+                    <button type="submit" id="eventButton4" class="s twitter"
+                        onclick="test.key.value='twitter'" disabled><i class="fab fa-twitter"></i> Search With Twitter</button>
+                    <h2>ECサイト</h2>
+                    <button type="submit" id="eventButton5" class="s amazon"
+                        onclick="test.key.value='amazon'" disabled><i class="fab fa-amazon"></i> Search With Amazon</button>
+                </form>
+            </div>
+    </div>
+    </div>
+    </main>
+    </div>
+    <script type="text/javascript" src="js/search.js"></script>
+</body>
+</html>

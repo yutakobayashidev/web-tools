@@ -1,0 +1,62 @@
+#input1 {
+    background-image: url(/css/searchicon.png);
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    margin-bottom: 12px;
+}
+
+
+.s {
+    font-weight: 700;
+    font-size: 1rem;
+    padding: .8em 0;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.4;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: .45em;
+    border: 1px solid #0000;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 2px 4px -2px #21253840;
+}
+
+.google {
+    color: #000;
+    background-color: #eff6fb99;
+}
+
+.zozo {
+    color: #fff;
+    background-color: #000;
+    margin-bottom: 20px;
+}
+
+
+.twitter {
+    color: #fff;
+    background-color: #00acee;
+}
+
+.bing {
+    color: #fff;
+    background-color: #01809e;
+}
+
+.amazon {
+    color: #fff;
+    background-color: #FF9900;
+}
+
+.yahoojp {
+    color: #fff;
+    background-color: #FF0027;
+}

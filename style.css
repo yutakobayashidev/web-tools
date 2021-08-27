@@ -1,0 +1,129 @@
+:root {
+    --background: #fff;
+    --a: #000000d1;
+  }
+
+/* サイト全体の装飾とブラウザのスタイルを上書き */
+body {
+background-color: var(--background);
+color: var(--color);
+margin: 0px;
+padding: 0px;
+font-family: -apple-system,"BlinkMacSystemFont","Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif,"Segoe UI Emoji";
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+  }
+
+#myInput {
+    content: "\f105";
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    border-radius: 50px;
+    margin-bottom: 12px; /* Add some space below the input */
+  }
+  
+  #myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul#myUL li {
+      padding: 0;
+  }
+  #myUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+  }
+  
+  #myUL li a:hover:not(.header) {
+    background-color: #c8e4ff; /* Add a hover effect to all links, except for headers */
+  }
+
+ol, ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-header a {
+font-weight: 700;
+}
+
+.tool_list {
+    display: flex;
+    padding: 15px 0;
+}
+
+.tool_list_title_p {
+    padding-left: 15px;
+}
+
+a {
+color: var(--fff);
+text-decoration: none;
+}
+
+.tool_list_emoji {
+background-color: #edf2f7;
+width: 92px;
+height: 92px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 42px;
+border-radius: 12px;
+}
+
+.title {
+    padding: 2.5rem 0px;
+    border-bottom: solid 1px #cfdce6;
+}
+
+.c {
+    text-align: center;
+}
+
+#content {
+    display: flex;
+}
+
+.main {
+    flex: 1 1 0%;
+}
+
+.main-inner {
+    max-width: 760px;
+    margin: 0px auto;
+    padding: 0px 1.8rem;
+}
+
+.sidebar-inner {
+    width: 350px;
+    position: sticky;
+    top: 0px;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid #cfdce6;
+    padding: 15px;
+}
+
+    input, textarea {
+        font-size: 20px;
+      }

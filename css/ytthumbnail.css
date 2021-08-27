@@ -1,0 +1,39 @@
+#sbtn2 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: .8em 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.4;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: .45em;
+    border: 1px solid #0000;
+    background-color: #00acee;
+    text-align: center;
+    width: 100%;
+  }
+
+.artiTable {
+    width:100%;
+    margin: 0 auto;
+   }
+   
+   .artiTable th,td {
+    border: 1px solid #ddd;
+   }
+   
+   .artiTable th {
+    text-align:center;
+    font-weight: bold;
+   }
+   
+   .artiTable.custom th,
+   .artiTable.custom td {
+    text-align:center;
+    vertical-align:middle;
+   }

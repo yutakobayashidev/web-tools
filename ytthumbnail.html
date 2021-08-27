@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/ytthumbnail.css">
+    <!-- Chromium-->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>⏩</text></svg>">
+    <!-- Safari / IE -->
+    <link rel="icon alternate" type="image/png" href="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f528.png" />
+    <title>Youtubeサムネイル取得機</title>
+</head>
+
+<body>
+    <div id="content">
+        <aside class="sidebar">
+            <div class="sidebar-inner">
+                <header class="sidebar-header">
+                    <a href="index.html">🔨 便利なウェブツール</a>
+                    <div>
+                        <a href="https://github.com/progedu/web-tools">
+                            <img src="img/github.svg" width="32" height="32">
+                        </a>
+                    </div>
+                </header>
+                <ul class="sidemenu">
+                    <li><a href="letter.html">✏️ 文字数カウンター</a></li>
+                    <li><a href="search.html">🔎 様々な検索エンジンで検索</a></li>
+                    <li><a href="clock.html">⏰ ストップウォッチ・残り時間</a></li>
+                    <li><a href="ytthumbnail.html">⏩ Youtubeのサムネイルを取得</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main class="main">
+            <div class="main-inner">
+                <h1 class="title c">⏩ Youtubeのサムネイルを取得</h1>
+                <p>Youtubeの動画のURL(短縮URLでも可能)を入力することでサムネイルを取得できるツールです。大きなサイズのサムネイルがあるかどうかは動画の解像度などに依存します。</p>
+            <form id="text-form" action="">
+		<input name="text" id="myInput" accesskey="U" placeholder="取得したい動画のURLを入力してください"></input>
+        <button type="submit" id="sbtn2">サムネイルを取得</button>
+</form>
+
+<table class="artiTable custom">
+<thead>
+<tr>
+<th>サムネイル</th>
+<th>サイズ</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="maxresdefault" href="" target="_blank"><img id="maxresdefault_img" class="lazy lazy-hidden aligncenter size-full wp-image-1021" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" alt="maxresdefault" width="120" height="auto" /></td>
+<td>1280&#215;720</td>
+<td id="maxresdefault_url"></td>
+</tr>
+<tr>
+<td><a id="sddefault" href="" target="_blank"><img id="sddefault_img" class="lazy lazy-hidden aligncenter size-full wp-image-1020" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" alt="sddefault" width="120" height="auto" /></td>
+<td>640&#215;480</td>
+<td id="sddefault_url"></td>
+</tr>
+<tr>
+<td><a id="hqdefault" href="" target="_blank"><img id="hqdefault_img" class="lazy lazy-hidden aligncenter size-full wp-image-1018" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" alt="hqdefault" width="120" height="auto" /></a></td>
+<td>480&#215;360</td>
+<td id="hqdefault_url"></td>
+</tr>
+<tr>
+<td><a id="0" href="" target="_blank"><img id="0_img" class="lazy lazy-hidden aligncenter size-full wp-image-1019" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" alt="0" width="120" height="auto" /></a></td>
+<td>480&#215;360</td>
+<td id="0_url"></td>
+</tr>
+<tr>
+<td><a id="mqdefault" href="" target="_blank"><img id="mqdefault_img" class="lazy lazy-hidden aligncenter size-full wp-image-1017" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" alt="mqdefault" width="120" height="auto"/></a></td>
+<td>320&#215;180</td>
+<td id="mqdefault_url"></td>
+</tr>
+<tr>
+<td><a id="default" href="" target="_blank" ><img id="default_img" class="lazy lazy-hidden aligncenter size-full wp-image-1012" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" alt="default" width="120" height="auto" /></a></td>
+<td>120&#215;90</td>
+<td id="default_url" ></td>
+</tr>
+<tr>
+<td><a id="1" href="" target="_blank" ><img id="1_img" class="lazy lazy-hidden aligncenter size-full wp-image-1014" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" alt="1" width="120" height="auto" /></a></td>
+<td>120&#215;90</td>
+<td id="1_url"></td>
+</tr>
+<tr>
+<td><a id="2" href="" target="_blank"><img id="2_img" class="lazy lazy-hidden aligncenter size-full wp-image-1015" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" alt="2" width="120" height="auto" /></a></td>
+<td>120&#215;90</td>
+<td id="2_url"></td>
+</tr>
+<tr>
+<td><a id="3" href="" target="_blank"><img id="3_img" class="lazy lazy-hidden aligncenter size-full wp-image-1016" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" alt="3" width="120" height="auto" /></a></td>
+<td>120&#215;90</td>
+<td id="3_url"></td>
+</tr>
+</tbody>
+</table>
+</main>
+</div>
+<script type="text/javascript" src="js/ytthumbnail.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <!-- Chromium-->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🔨</text></svg>">
+    <!-- Safari / IE -->
+    <link rel="icon alternate" type="image/png" href="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f528.png" />
+    <title>便利なウェブツール</title>
+</head>
+
+<body>
+    <div id="content">
+        <aside class="sidebar">
+            <div class="sidebar-inner">
+                <header class="sidebar-header">
+                    <a href="index.html">🔨 便利なウェブツール</a>
+                    <div>
+                        <a href="https://github.com/progedu/web-tools">
+                            <img src="img/github.svg" width="32" height="32">
+                        </a>
+                    </div>
+                </header>
+                <ul class="sidemenu">
+                    <li><a href="letter.html">✏️ 文字数カウンター</a></li>
+                    <li><a href="search.html">🔎 様々な検索エンジンで検索</a></li>
+                    <li><a href="clock.html">⏰ ストップウォッチ・残り時間</a></li>
+                    <li><a href="ytthumbnail.html">⏩ Youtubeのサムネイルを取得</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main class="main">
+            <div class="main-inner">
+                <h1 class="title c">🔨 便利なウェブツール</h1>
+                <p>あったら便利そうなウェブツールを集めたサイトを作りました。<br>文字数カウンターやYoutubeのサムネイルを取得できるツールなどなど用意しています。</p>
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="使用したいツール名を入力">
+                <div id="tool">
+                <div class="tool_list">
+                    <a class="tool_list_emoji" href="letter.html"><span>✏️</span></a>
+                    <div>
+                        <a class="tool_list_title" href="letter.html">
+                            <h2 class="tool_list_title_p">文字数カウンター</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="tool_list">
+                    <a class="tool_list_emoji" href="search.html"><span>🔎</span></a>
+                    <div>
+                        <a class="tool_list_title" href="search.html">
+                            <h2 class="tool_list_title_p">様々な検索エンジンで検索</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="tool_list">
+                    <a class="tool_list_emoji" href="clock.html"><span>⏰</span></a>
+                    <div>
+                        <a class="tool_list_title" href="clock.html">
+                            <h2 class="tool_list_title_p">ストップウォッチ・残り時間</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="tool_list">
+                    <a class="tool_list_emoji" href="ytthumbnail.html"><span>⏩</span></a>
+                    <div>
+                        <a class="tool_list_title" href="ytthumbnail.html">
+                            <h2 class="tool_list_title_p">Youtubeのサムネイル取得</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>
+    </div>
+</body>
+<script>
+    function myFunction() {
+        // Declare variables
+        var input, filter, divTool, divToolChild, a, txtValue;
+        input = document.getElementById('myInput');
+        filter = input.value.toUpperCase();
+        divTool = document.getElementById("tool");
+        divToolChild = divTool.getElementsByClassName('tool_list');
+         // alert(divToolChild.length)
+
+        // Loop through all list items, and hide those who don't match the search query
+        for (i = 0; i < divToolChild.length; i++) {
+            a = divToolChild[i].getElementsByTagName("a")[1];
+            txtValue = a.textContent || a.innerText;
+
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                divToolChild[i].style.display = "";
+            } else {
+                divToolChild[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</html>
